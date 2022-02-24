@@ -1,5 +1,5 @@
 #include <iostream>
-#include <GL\glut.h>
+#include <GL/glut.h>
 using namespace std;
 void defaultDisplay();
 void point();
@@ -18,14 +18,24 @@ return 0;
 void triangle(){
 GLfloat trianglevertex[] = 
 {
-   0.0f, 0.45f, 0.0f,
-  -0.45f, 0.0f, 0.0f,
-   0.45f, 0.0f, 0.0f
+
+0.0f, 0.60f, 0.0f,
+  -0.45f, 0.15f, 0.0f,
+   0.45f, 0.15f, 0.0f,
+   
+   -0.45f, -0.30f, 0.0f,
+   0.0f, 0.15f, 0.0f,
+   0.45f, -0.30f, 0.0f,
+   
+   -0.45f, -0.75f, 0.0f,
+   0.0f, -0.30f, 0.0f,
+   0.45f, -0.75f, 0.0f,
+
 };
 	
 glEnableClientState(GL_VERTEX_ARRAY);
 glVertexPointer(3, GL_FLOAT, 0, trianglevertex);
-glDrawArrays(GL_TRIANGLES, 0, 3);
+glDrawArrays(GL_TRIANGLES, 0, 9);
 glDisableClientState(GL_VERTEX_ARRAY);
 
 }
